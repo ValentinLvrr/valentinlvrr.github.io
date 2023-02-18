@@ -12,8 +12,7 @@ body {
 /*      LOGO     */
 /*---------------*/
 img.logo {
-  margin-left: 16%;
-  margin-right: 0%;
+  margin-left: 50px;
   width: 70px;
   border-radius: 20px;
 }
@@ -54,7 +53,7 @@ div.devices {
   display: flex;
 }
 img.devices{
-  width: 50%;
+  width: 900px;
 }
 
 /*---------------*/
@@ -125,8 +124,20 @@ img.logo:hover{
   transform: rotate(360deg);
 }
 
-@media (max-width:400px) {
+@media (max-width:800px) {
+  div.images {
+    margin-top: 10px;
+  }
+  img.devices{
+    width: 100%;
+  }
   div.project_box {
-    width: 300px;
+    width: 90%;
+  }
+  div.separation {
+    height: 250px;
+  }
+  div.separation img{
+    content: url("https://skillicons.dev/icons?i=html,css,js,github,raspberrypi,linux,react,python,markdown,vscode&theme=dark&perline=5");
   }
 }
