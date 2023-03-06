@@ -1,6 +1,6 @@
 const container = document.getElementById('project_container');
 
-function createProjectBox(repo_name,repo_desc,repo_stars,html_url)  {
+function createProjectBox(repo_name,repo_desc,repo_stars,main_language,click_url)  {
     const div = document.createElement('div');
     div.classList.add('project_box')
 
@@ -12,12 +12,16 @@ function createProjectBox(repo_name,repo_desc,repo_stars,html_url)  {
     description.textContent = repo_desc
     div.appendChild(description)
 
+    const language = document.createElement('h4')
+    language.textContent = "made with " + main_language
+    div.appendChild(language)
+
     const stars = document.createElement('h4')
     stars.textContent = repo_stars+" ⭐"
     div.appendChild(stars)
 
     div.addEventListener('click', function() {
-        window.open(html_url,'_blank');
+        window.open(click_url,'_blank');
     })
     
     container.appendChild(div);
@@ -33,7 +37,8 @@ function createProjectBox(repo_name,repo_desc,repo_stars,html_url)  {
                     repo_name = data[i]['name'],
                     repo_desc = data[i]['description'],
                     repo_stars = data[i]['stargazers_count'],
-                    html_url = data[i]['html_url']
+                    main_language = data[i]['language'],
+                    click_url = data[i]['html_url']
                 )
             }
         }
