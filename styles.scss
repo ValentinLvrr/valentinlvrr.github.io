@@ -1,5 +1,5 @@
 $text_color: beige;
-$background-text_color: #121212;
+$background-color: #121212;
 $separation_color: #503b3b;
 
 @import "https://fonts.googleapis.com/css?family=Raleway&display=swap";
@@ -7,7 +7,7 @@ $separation_color: #503b3b;
 body {
     user-select: none;
     margin: 0 auto;
-    background-color: $background-text_color;
+    background-color: $background-color;
     color: $text_color;
     font-family: 'Raleway';
 }
