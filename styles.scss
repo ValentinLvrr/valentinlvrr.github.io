@@ -99,20 +99,27 @@ footer {
 }
 
 @media (max-width:800px) {
-    body{
+    body {
         overflow-x: hidden;
     }
-    div.images { margin-top: 10px; }
-    #project_container{
-        div{
+
+    div.images {
+        margin-top: 10px;
+    }
+
+    #project_container {
+        div {
             width: 300px;
-            &:hover{
+
+            &:hover {
                 letter-spacing: normal;
             }
         }
     }
-    div.separation { 
+
+    div.separation {
         height: 250px;
+
         img {
             content: url('https://skillicons.dev/icons?i=html,css,js,github,raspberrypi,linux,react,python,markdown,vscode&theme=dark&perline=5');
         }
