@@ -1,0 +1,120 @@
+$text_color: beige;
+$background-text_color: #121212;
+$separation_color: #503b3b;
+
+@import "https://fonts.googleapis.com/css?family=Raleway&display=swap";
+
+body {
+    user-select: none;
+    margin: 0 auto;
+    background-color: $background-text_color;
+    color: $text_color;
+    font-family: 'Raleway';
+}
+
+section {
+    h1 {
+        padding-top: 50px;
+        font-size: 40px;
+        text-align: center;
+    }
+
+    h3 {
+        text-align: center;
+    }
+
+    #images {
+        align-items: center;
+        margin-top: 30px;
+        display: flex;
+        opacity: 0.8;
+
+        img.logo {
+            margin-left: 50px;
+            width: 70px;
+            border-radius: 20px;
+        }
+
+        img.medias {
+            filter: invert(100%);
+            margin-left: 15px;
+            width: 30px;
+            height: 30px;
+        }
+
+        img:hover {
+            transition-property: all;
+            transition-timing-function: ease-in-out;
+            transition-duration: 0.3s;
+            transform: rotate(360deg);
+        }
+    }
+}
+
+#devices {
+    justify-content: center;
+    margin-top: 5%;
+    display: flex;
+
+    img {
+        width: 60%;
+    }
+}
+
+.separation {
+    background-color: $separation_color;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 70px;
+}
+
+#project_container {
+    justify-content: space-around;
+    display: flex;
+    flex-flow: wrap;
+    margin: auto;
+    padding-bottom: 100px;
+
+    div {
+        cursor: pointer;
+        background: #503b3b;
+        text-align: center;
+        margin-top: 30px;
+        opacity: 0.7;
+        width: 600px;
+        border: solid;
+
+        &:hover {
+            transition: .1s ease-in-out;
+            transition-property: all;
+            letter-spacing: 0.4px;
+            opacity: 1;
+        }
+    }
+}
+
+footer {
+    background-color: $separation_color;
+    height: 200px;
+}
+
+@media (max-width:800px) {
+    body{
+        overflow-x: hidden;
+    }
+    div.images { margin-top: 10px; }
+    #project_container{
+        div{
+            width: 300px;
+            &:hover{
+                letter-spacing: normal;
+            }
+        }
+    }
+    div.separation { 
+        height: 250px;
+        img {
+            content: url('https://skillicons.dev/icons?i=html,css,js,github,raspberrypi,linux,react,python,markdown,vscode&theme=dark&perline=5');
+        }
+    }
+}

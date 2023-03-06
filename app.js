@@ -1,4 +1,6 @@
-function createProjectBox(repo_name,repo_desc,repo_stars)  {
+const container = document.getElementById('project_container');
+
+function createProjectBox(repo_name,repo_desc,repo_stars,html_url)  {
     const div = document.createElement('div');
     div.classList.add('project_box')
 
@@ -14,21 +16,26 @@ function createProjectBox(repo_name,repo_desc,repo_stars)  {
     stars.textContent = repo_stars+" ⭐"
     div.appendChild(stars)
 
-    const container = document.querySelector('.project_container');
+    div.addEventListener('click', function() {
+        window.open(html_url,'_blank');
+    })
+    
     container.appendChild(div);
 }
 
-(function github_req() {
-    return fetch('https://api.github.com/users/ValentinLvrr/repos')
+(() => {
+    fetch('https://api.github.com/users/ValentinLvrr/repos')
     .then(response => response.json())
     .then(data => {
         for (i in data) {
-            console.log(data[i]['name'],':',data[i]['description'])
-            createProjectBox(
-                repo_name = data[i]['name'],
-                repo_desc = data[i]['description'],
-                repo_stars = data[i]['stargazers_count']
-            )
+            if (data[i]['id'] != 582566991 && data[i]['id'] != 603343096){ // excluding readme.md & portfolio
+                createProjectBox(
+                    repo_name = data[i]['name'],
+                    repo_desc = data[i]['description'],
+                    repo_stars = data[i]['stargazers_count'],
+                    html_url = data[i]['html_url']
+                )
+            }
         }
     })
 })()

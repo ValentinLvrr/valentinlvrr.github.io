@@ -1,0 +1,107 @@
+@import "https://fonts.googleapis.com/css?family=Raleway&display=swap";
+body {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  margin: 0 auto;
+  background-color: #121212;
+  color: beige;
+  font-family: "Raleway";
+}
+
+section h1 {
+  padding-top: 50px;
+  font-size: 40px;
+  text-align: center;
+}
+section h3 {
+  text-align: center;
+}
+section #images {
+  align-items: center;
+  margin-top: 30px;
+  display: flex;
+  opacity: 0.8;
+}
+section #images img.logo {
+  margin-left: 50px;
+  width: 70px;
+  border-radius: 20px;
+}
+section #images img.medias {
+  filter: invert(100%);
+  margin-left: 15px;
+  width: 30px;
+  height: 30px;
+}
+section #images img:hover {
+  transition-property: all;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.3s;
+  transform: rotate(360deg);
+}
+
+#devices {
+  justify-content: center;
+  margin-top: 5%;
+  display: flex;
+}
+#devices img {
+  width: 60%;
+}
+
+.separation {
+  background-color: #503b3b;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 70px;
+}
+
+#project_container {
+  justify-content: space-around;
+  display: flex;
+  flex-flow: wrap;
+  margin: auto;
+  padding-bottom: 100px;
+}
+#project_container div {
+  cursor: pointer;
+  background: #503b3b;
+  text-align: center;
+  margin-top: 30px;
+  opacity: 0.7;
+  width: 600px;
+  border: solid;
+}
+#project_container div:hover {
+  transition: 0.1s ease-in-out;
+  transition-property: all;
+  letter-spacing: 0.4px;
+  opacity: 1;
+}
+
+footer {
+  background-color: #503b3b;
+  height: 200px;
+}
+
+@media (max-width: 800px) {
+  body {
+    overflow-x: hidden;
+  }
+  div.images {
+    margin-top: 10px;
+  }
+  #project_container div {
+    width: 300px;
+  }
+  #project_container div:hover {
+    letter-spacing: normal;
+  }
+  div.separation {
+    height: 250px;
+  }
+  div.separation img {
+    content: url("https://skillicons.dev/icons?i=html,css,js,github,raspberrypi,linux,react,python,markdown,vscode&theme=dark&perline=5");
+  }
+}/*# sourceMappingURL=styles.css.map */
