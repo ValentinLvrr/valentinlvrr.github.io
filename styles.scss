@@ -3,13 +3,14 @@ $background-color: #121212;
 $separation_color: #503b3b;
 
 @import "https://fonts.googleapis.com/css?family=Raleway&display=swap";
+@import url('https://fonts.cdnfonts.com/css/general-sans');
 
 body {
     user-select: none;
     margin: 0 auto;
     background-color: $background-color;
     color: $text_color;
-    font-family: 'Raleway';
+    font-family: 'General Sans';
 }
 
 section {
@@ -82,12 +83,11 @@ section {
         margin-top: 30px;
         opacity: 0.7;
         width: 600px;
-        border: solid;
 
         &:hover {
             transition: .1s ease-in-out;
             transition-property: all;
-            letter-spacing: 0.4px;
+            letter-spacing: 0.2px;
             opacity: 1;
         }
     }
@@ -109,6 +109,7 @@ footer {
 
     #project_container {
         div {
+            
             width: 300px;
 
             &:hover {
@@ -120,7 +121,7 @@ footer {
     div.separation {
         height: 250px;
 
-        img {
+        img#skills {
             content: url('https://skillicons.dev/icons?i=html,css,js,github,raspberrypi,linux,react,python,markdown,vscode&theme=dark&perline=5');
         }
     }
