@@ -1,4 +1,13 @@
 const container = document.getElementById('project_container');
+const logo = document.getElementById('logo')
+
+function setFavicons(favImg){
+    let headTitle = document.querySelector('head');
+    let setFavicon = document.createElement('link');
+    setFavicon.setAttribute('rel','shortcut icon');
+    setFavicon.setAttribute('href',favImg);
+    headTitle.appendChild(setFavicon);
+}
 
 function createProjectBox(repo_name,repo_desc,repo_stars,main_language,click_url)  {
     const div = document.createElement('div');
@@ -30,6 +39,8 @@ function createProjectBox(repo_name,repo_desc,repo_stars,main_language,click_url
     fetch('https://api.github.com/users/ValentinLvrr/repos')
     .then(response => response.json())
     .then(data => {
+        logo.src = data[0]['owner']['avatar_url']
+        setFavicons(data[0]['owner']['avatar_url'])
         for (i in data) {
             if (data[i]['id'] != 582566991 && data[i]['id'] != 603343096){ // excluding readme.md & portfolio
                 createProjectBox(
