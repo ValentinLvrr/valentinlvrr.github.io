@@ -5,19 +5,18 @@ function createProjectBox(repo_name,repo_desc,repo_stars,main_language,click_url
     div.classList.add('project_box')
 
     const title = document.createElement('h2');
-    title.textContent = repo_name
-    div.appendChild(title)
-
     const description = document.createElement('h4')
-    description.textContent = repo_desc
-    div.appendChild(description)
-
     const language = document.createElement('h4')
-    language.textContent = "made with " + main_language
-    div.appendChild(language)
-
     const stars = document.createElement('h4')
+
+    title.textContent = repo_name
+    description.textContent = repo_desc
+    language.textContent = "made with " + main_language
     stars.textContent = repo_stars+" ⭐"
+
+    div.appendChild(title)
+    div.appendChild(description)
+    div.appendChild(language)
     div.appendChild(stars)
 
     div.addEventListener('click', function() {

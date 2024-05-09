@@ -1,6 +1,6 @@
-$text_color: beige;
+$text_color: rgb(245, 250, 255);
 $background-color: #121212;
-$separation_color: #503b3b;
+$separation_color: #485c69;
 
 @import "https://fonts.googleapis.com/css?family=Raleway&display=swap";
 @import url('https://fonts.cdnfonts.com/css/general-sans');
@@ -78,7 +78,7 @@ section {
 
     div {
         cursor: pointer;
-        background: #503b3b;
+        background: $separation_color;
         text-align: center;
         margin-top: 30px;
         opacity: 0.7;
@@ -87,7 +87,6 @@ section {
         &:hover {
             transition: .1s ease-in-out;
             transition-property: all;
-            letter-spacing: 0.2px;
             opacity: 1;
         }
     }

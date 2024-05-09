@@ -6,7 +6,7 @@ body {
           user-select: none;
   margin: 0 auto;
   background-color: #121212;
-  color: beige;
+  color: rgb(245, 250, 255);
   font-family: "General Sans";
 }
 
@@ -52,7 +52,7 @@ section #images img:hover {
 }
 
 .separation {
-  background-color: #503b3b;
+  background-color: #485c69;
   text-align: center;
   padding-top: 40px;
   padding-bottom: 70px;
@@ -67,7 +67,7 @@ section #images img:hover {
 }
 #project_container div {
   cursor: pointer;
-  background: #503b3b;
+  background: #485c69;
   text-align: center;
   margin-top: 30px;
   opacity: 0.7;
@@ -76,12 +76,11 @@ section #images img:hover {
 #project_container div:hover {
   transition: 0.1s ease-in-out;
   transition-property: all;
-  letter-spacing: 0.2px;
   opacity: 1;
 }
 
 footer {
-  background-color: #503b3b;
+  background-color: #485c69;
   height: 200px;
 }
 
